@@ -68,7 +68,7 @@ jobs:
         uses: docker/build-push-action@v5
         with:
           context: .
-          file: WebApi/Dockerfile.prod
+          file: Dockerfile.prod
           push: ${{ github.event_name != 'pull_request' }}
           tags: fadisami/webapiapp:prod
           labels: ${{ steps.meta.outputs.labels }}
