@@ -64,7 +64,7 @@ using (var scope = app.Services.CreateScope())
 app.MapGet("/persons", async (AppDbContext ctx) => {
     return await ctx.Persons.ToListAsync();
     });
-app.MapGet("/allpersons", async (AppDbContext ctx) =>
+app.MapGet("/mypersons", async (AppDbContext ctx) =>
 {
     return await ctx.Persons.ToListAsync();
 });
