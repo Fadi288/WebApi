@@ -53,10 +53,10 @@ jobs:
         with:
           cosign-release: 'v2.2.4'
 
-      - name: 🔐 Sign the image with Cosign
-        if: github.ref == 'refs/heads/main'
-        run: |
-          cosign sign --yes ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}@${{ steps.build-and-push.outputs.digest }}
-        env:
-          COSIGN_EXPERIMENTAL: "true"
-          COSIGN_YES: "true"
+      # - name: 🔐 Sign the image with Cosign
+      #   if: github.ref == 'refs/heads/main'
+      #   run: |
+      #     cosign sign --yes ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}@${{ steps.build-and-push.outputs.digest }}
+      #   env:
+      #     COSIGN_EXPERIMENTAL: "true"
+      #     COSIGN_YES: "true"
