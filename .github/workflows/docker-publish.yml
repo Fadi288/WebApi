@@ -4,10 +4,12 @@ on:
   push:
     branches: ["main"]
     tags: ["v*.*.*"]
+    paths-ignore:
+      - '.github/workflows/docker-publish.yml'
 
 env:
   REGISTRY: docker.io
-  IMAGE_NAME: fadisami/webapi
+  IMAGE_NAME: fadisami/webapiapp
   DOCKERFILE_PATH: Dockerfile.prod
   CONTEXT: .
 
